@@ -1,8 +1,8 @@
 
-import NavBar from '@/components/navBar';
+import NavBar from '@/components/layout/navBar';
 import './globals.css'
 import localFont from "next/font/local";
-import Footer from '@/components/footer';
+import Footer from '@/components/layout/footer';
 
 const display = localFont({
   src:[
