@@ -19,13 +19,13 @@ const NavBar = () => {
   return (
     <header className=' py-4 w-full px-4 lg:px-8 '>
       <nav class className='flex justify-between items-center  '>
-        <div>
+        <Link href='/'>
           <Image
             className='cursor-pointer w-6 h-6'
             src={Smiley}
             alt='smiley face'
           />
-        </div>
+        </Link>
         <div className='flex '>
           <LinkWrapper href='/information' name='Information' />
           <LinkWrapper href='/' name='Work' />
