@@ -38,10 +38,14 @@ const text = localFont({
   
 })
 
+export const viewport = {
+  themeColor: '#ebebeb',
+}
 
 export const metadata = {
   title: 'Pelle Adlén - Product designer',
   description: 'Pelle Adlén is a product designer & UI developer from Sweden'
+
 }
 
 export default function RootLayout({ children }) {
