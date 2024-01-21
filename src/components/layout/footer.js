@@ -7,7 +7,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col-reverse w-full gap-12 md:flex-row py-8 px-4 md:px-8  justify-between'>
+    <footer className='flex flex-col-reverse w-full gap-12 md:flex-row py-8  justify-between'>
       <ul className='flex gap-2 md:gap-4 items-center  '>
         {socialLinks.map((link) => (
           <li

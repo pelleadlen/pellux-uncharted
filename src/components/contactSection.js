@@ -1,3 +1,4 @@
+import Footer from "./layout/footer";
 import { Pellux } from "./rive";
 
 import { RxArrowRight } from "react-icons/rx";
@@ -16,6 +17,7 @@ const ContactSection = () => {
           Get in touch
         </a>
       </div>
+      <Footer />
     </section>
   );
 };
