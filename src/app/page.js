@@ -1,17 +1,18 @@
 "use client";
-
 import CaseGrid from "@/components/caseGrid";
 import ContactSection from "@/components/contactSection";
-import NavBar from "@/components/layout/navBar";
 
 export default function Home() {
   return (
     <>
       <main className='flex  min-h-screen flex-col mx-4 md:mx-8 '>
-        <h1 className=' font-display text-2xl py-24  tracking-[ -0.0225rem] text-gray-900 max-w-[500px] leading-tight    '>
-          Hi, I'm Pelle Adlén, a Product Designer creating user-friendly
-          experiences & systems with a focus on aesthetics and functionality.
-        </h1>
+        <div className=' pt-96 pb-6  gap-4    '>
+          <h1 className=' max-w-4xl  text-4xl font-normal tracking-[-0.03em]    '>
+            A Product Designer from Sweden, committed to creating
+            forward-thinking products and user-friendly experiences that speak
+            to both heart and mind.
+          </h1>
+        </div>
         <CaseGrid />
         <ContactSection />
       </main>

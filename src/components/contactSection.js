@@ -5,15 +5,13 @@ import { RxArrowRight } from "react-icons/rx";
 
 const ContactSection = () => {
   return (
-    <section className='py-4'>
-      <Pellux />
-      <div className=' text-xl md:text-4xl font-normal  font-display tracking-tight'>
-        <h3 className='max-w-xl text-gray-900'>
-          Interested in collaborating or just want to chat? Send me an email!
+    <section className='py-4 '>
+      <Pellux className='h-96' />
+      <div className=' text-xl max-w-xs md:text-2xl font-normal font-display '>
+        <h3 className=' text-gray-900'>
+          Interested in collaborating or just want to talk?
         </h3>
-
-        <a className='text-gray-500 py-6 items-center flex  cursor-pointer'>
-          <RxArrowRight />
+        <a className='underline py-4 items-center flex  cursor-pointer'>
           Get in touch
         </a>
       </div>

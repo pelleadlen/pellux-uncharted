@@ -18,9 +18,9 @@ const ImageSlider = (props) => {
   const [currentImage, setCurrentImage] = useState(imgs[0].imgSrc);
   return (
     <div className={`${props.className}`}>
-      <div className='relative h-full'>
+      <div className='relative'>
         <Image
-          className=' h-full object-cover object-top      '
+          className='rounded-2xl object-cover object-top      '
           src={currentImage}
         />
         <div className=' flex gap-2 absolute bottom-6 left-6'>

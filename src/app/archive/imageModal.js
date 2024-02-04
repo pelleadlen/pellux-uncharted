@@ -15,17 +15,17 @@ const ImageModal = ({ image, closeModal }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.4 } }}
       onClick={closeModal}
-      className='flex flex-col overflow-hidden bg-white bg-opacity-80 backdrop-blur-lg fixed inset-0 z-50 items-center justify-center'>
+      className='flex flex-col overflow-hidden bg-white bg-opacity-90 backdrop-blur-lg fixed inset-0 z-50 items-center justify-center'>
       <motion.div
         transition={transitionIn}
         layoutId={image.id}
-        className='rounded-lg overflow-hidden'>
+        className='rounded-lg overflow-hidden '>
         <Image
           src={image.src}
           layout='responsive'
           width={500}
           height={500}
-          objectFit='contain'
+          objectFit='cover'
         />
       </motion.div>
       <button onClick={closeModal} className='mb-4'>

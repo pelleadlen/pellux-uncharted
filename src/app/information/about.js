@@ -3,7 +3,7 @@ import ImageSlider from "./imageSlider";
 
 const About = () => {
   return (
-    <section className=' grid grid-cols-12 gap-12 items-start '>
+    <section className=' grid grid-cols-12 gap-8 items-start '>
       <div className='col-span-8'>
         <ImageSlider />
       </div>

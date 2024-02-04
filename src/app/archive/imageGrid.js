@@ -44,7 +44,8 @@ const ImageGrid = () => {
 
   const transitionOut = {
     type: "spring",
-    duration: 0.8,
+    stiffness: 400,
+    damping: 50,
   };
 
   return (
@@ -60,7 +61,7 @@ const ImageGrid = () => {
             layoutId={image.id}
             key={image.id}
             onClick={() => handleImageClick(image)}
-            className='rounded-lg overflow-hidden min-w-80 w-full cursor-pointer relative'>
+            className=' rounded-2xl overflow-hidden min-w-80 w-full cursor-pointer relative'>
             <Image src={image.src} layout='responsive' objectFit='cover' />
           </motion.div>
         ))}

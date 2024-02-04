@@ -1,20 +1,13 @@
 import NavBar from "@/components/layout/navBar";
 import "./globals.css";
 import localFont from "next/font/local";
+import NavBarMobile from "@/components/layout/navBarMobile";
 
 const display = localFont({
   src: [
     {
-      path: "../../public/fonts/HelveticaNowDisplay-Bold.ttf",
-      weight: "700",
-    },
-    {
-      path: "../../public/fonts/HelveticaNowDisplay-Medium.ttf",
-      weight: "500",
-    },
-    {
-      path: "../../public/fonts/HelveticaNowDisplay-Regular.ttf",
-      weight: "400",
+      path: "../../public/fonts/HelveticaNowDisplay-Regular.otf",
+      weight: "normal",
     },
   ],
 });
@@ -40,7 +33,7 @@ const text = localFont({
 });
 
 export const viewport = {
-  themeColor: "#ebebeb",
+  themeColor: "#E8F5FE",
 };
 
 export const metadata = {
@@ -54,6 +47,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={bodyClass}>
         <NavBar />
+        <NavBarMobile />
         {children}
       </body>
     </html>

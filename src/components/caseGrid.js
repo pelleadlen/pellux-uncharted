@@ -1,8 +1,8 @@
 import Image from "next/image";
 import designsystem from "../../public/images/designsys.png";
 import me from "../../public/images/pelluxblank.png";
-import Charlie from "../../public/images/CharlieThumbnail.png";
-import Fourtrack from "../../public/images/fourtrak.png";
+import Charlie from "../../public/images/1.png";
+import Fourtrack from "../../public/images/130.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -14,8 +14,8 @@ const selectedWork = [
     image: me,
     description: "description",
     path: "/charlie",
-    tag: "USER RESEARCH",
-    title: "MEMORISELY",
+    tag: "User Research",
+    title: "Memorisely",
   },
   {
     key: "two",
@@ -23,8 +23,8 @@ const selectedWork = [
     image: Charlie,
     description: "description",
     path: "/charlie",
-    tag: "PRODUCT DESIGN",
-    title: "CHARLIE",
+    tag: "Product Design",
+    title: "Charlie",
   },
   {
     key: "three",
@@ -32,8 +32,8 @@ const selectedWork = [
     image: Fourtrack,
     description: "description",
     path: "/charlie",
-    tag: "PRODUCT DESIGN",
-    title: "FOURTRACK",
+    tag: "Product Design",
+    title: "Fourtrack",
   },
   {
     key: "four",
@@ -61,11 +61,11 @@ const CaseGrid = () => {
             onMouseLeave={() => setHoveredKey(null)}
             className={`  rounded-2xl ${colSpan} overflow-hidden relative`}
             href={`${path}`}>
-            <div className='absolute z-10 text-sm text-gray-500 top-4 left-4 flex gap-2'>
-              <p className='py-1 tracking-tighter px-2 bg-white rounded-full'>
+            <div className='absolute font-display z-10 text-sm text-white bottom-4 left-4 flex gap-2'>
+              <p className='py-1 px-2 bg-[#555555] bg-opacity-25 backdrop-blur-xl   rounded-full'>
                 {title}
               </p>
-              <p className=' py-1 tracking-tighter px-2 bg-white rounded-full'>
+              <p className=' py-1  px-2 bg-[#555555] bg-opacity-25  backdrop-blur-xl   rounded-full'>
                 {tag}
               </p>
             </div>
@@ -73,6 +73,10 @@ const CaseGrid = () => {
             <motion.div
               animate={{ scale: hoveredKey === key ? 1.02 : 1 }}
               transition={{ duration: 0.6 }}>
+              <motion.div
+                animate={{ opacity: hoveredKey === key ? 1 : 0.2 }}
+                className='absolute inset-0 bg-opacity-20 bg-black '
+              />
               <Image
                 alt={description}
                 className={`object-cover  md:${colSpan} aspect-square md:aspect-auto `}

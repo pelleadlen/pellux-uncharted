@@ -21,6 +21,12 @@ module.exports = {
         secondary: "#5CC17B",
         tertiary: "#E7D144",
         warning: "#DE5F3F",
+        surface: "#F2F2F2",
+      },
+      textColor: {
+        primary: "#101010",
+        secondary: "#686868",
+        tertiary: "#E7D144",
       },
     },
   },
