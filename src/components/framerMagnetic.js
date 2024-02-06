@@ -11,8 +11,8 @@ export default function FramerMagnetic({ children }) {
     const { width, height, left, top } = ref.current.getBoundingClientRect();
     let x = clientX - (left + width / 2);
     let y = clientY - (top + height / 2);
-    x = Math.sign(x) * Math.sqrt(Math.abs(x));
-    y = Math.sign(y) * Math.sqrt(Math.abs(y));
+    // x = Math.sign(x) * Math.sqrt(Math.abs(x));
+    // y = Math.sign(y) * Math.sqrt(Math.abs(y));
     setPosition({ x, y });
   };
 

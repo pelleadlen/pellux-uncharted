@@ -1,7 +1,6 @@
 import NavBar from "@/components/layout/navBar";
 import "./globals.css";
 import localFont from "next/font/local";
-import NavBarMobile from "@/components/layout/navBarMobile";
 
 const display = localFont({
   src: [
@@ -47,7 +46,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={bodyClass}>
         <NavBar />
-        <NavBarMobile />
+
         {children}
       </body>
     </html>
