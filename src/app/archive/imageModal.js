@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Video from "next-video";
+import styles from "./page.module.css";
 
-const ImageModal = ({ image, closeModal }) => {
+const ImageModal = ({ media, closeModal }) => {
   const transitionIn = {
     type: "spring",
     damping: 80,
@@ -18,16 +20,29 @@ const ImageModal = ({ image, closeModal }) => {
       className='flex flex-col overflow-hidden bg-white bg-opacity-90 backdrop-blur-lg fixed inset-0 z-50 items-center justify-center'>
       <motion.div
         transition={transitionIn}
-        layoutId={image.id}
+        layoutId={media.id}
         className='rounded-lg overflow-hidden '>
-        <Image
-          src={image.src}
-          layout='responsive'
-          width={500}
-          height={500}
-          objectFit='cover'
-        />
+        {media.type === "image" ? (
+          <Image
+            src={media.src}
+            layout='responsive'
+            className='h-full min-w-72 object-cover'
+          />
+        ) : (
+          <Video
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            src={media.src}
+            className={
+              media.hasVideoStyle ? styles.video : "h-full origin-center "
+            }
+          />
+        )}
       </motion.div>
+
       <button onClick={closeModal} className='mb-4'>
         Back to Grid
       </button>

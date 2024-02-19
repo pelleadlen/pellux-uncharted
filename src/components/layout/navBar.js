@@ -43,12 +43,14 @@ const NavBar = () => {
             <DesktopLink title={link.title} key={index} href={link.href} />
           );
         })}
-        <a
-          href='mailto:pelleadlen@gmail.com'
-          title='pelleadlen@gmail.com'
-          className='py-2 px-3 rounded-full hover:bg-[#F8F7F7] leading-none text-base bg-surface text-secondary font-display cursor-pointer'>
-          Get in touch
-        </a>
+        <button className=' py-2 px-3 flex items-center gap-2 rounded-full hover:bg-[#F8F7F7] bg-surface text-secondary font-display cursor-pointer'>
+          <a
+            href='mailto:pelleadlen@gmail.com'
+            title='pelleadlen@gmail.com'
+            className=' leading-none text-base'>
+            Get in touch
+          </a>
+        </button>
       </nav>
       <nav className=' flex md:hidden justify-between w-full items-center'>
         <Link

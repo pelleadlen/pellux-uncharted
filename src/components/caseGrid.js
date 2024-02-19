@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import designsystem from "../../public/images/designsys.png";
 import me from "../../public/images/pelluxblank.png";
-import Charlie from "../../public/images/1.png";
+import Charlie from "../../public/images/charwood.png";
 import Fourtrack from "../../public/images/130.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -48,7 +49,6 @@ const selectedWork = [
 
 const CaseGrid = () => {
   const [hoveredKey, setHoveredKey] = useState(null);
-  console.log(hoveredKey);
 
   return (
     <section className='py-4 mx-auto flex flex-col md:grid grid-cols-1 md:grid-cols-3 gap-4  '>
@@ -79,9 +79,9 @@ const CaseGrid = () => {
               />
               <Image
                 alt={description}
-                className={`object-cover  md:${colSpan} aspect-square md:aspect-auto `}
-                style={{ maxWidth: "100%", height: "100%" }}
+                className={`object-cover   md:${colSpan} aspect-square md:aspect-auto `}
                 src={image}
+                width='auto'
                 id={key}
               />
             </motion.div>

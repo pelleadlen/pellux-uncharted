@@ -22,6 +22,7 @@ module.exports = {
         tertiary: "#E7D144",
         warning: "#DE5F3F",
         surface: "#F2F2F2",
+        surfaceHover: "#E6E6E6",
       },
       textColor: {
         primary: "#101010",
