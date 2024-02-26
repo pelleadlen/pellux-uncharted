@@ -14,7 +14,6 @@ module.exports = {
       },
       fontFamily: {
         display: ["HelveticaNowDisplay", "sans-serif"],
-        text: ["HelveticaNowText", "sans-serif"],
       },
       colors: {
         primary: "#423FDE",
@@ -22,6 +21,7 @@ module.exports = {
         tertiary: "#E7D144",
         warning: "#DE5F3F",
         surface: "#F2F2F2",
+        surfaceSecondary: "#F8F7F7",
         surfaceHover: "#E6E6E6",
       },
       textColor: {

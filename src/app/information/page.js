@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import img from "../../../public/images/myself.jpg";
-import Footer from "@/components/layout/footer";
+
 import { RxCircle } from "react-icons/rx";
 import LocalTime from "./localTime";
 
@@ -19,11 +20,10 @@ export default function Information() {
           className='w-full max-h-screen object-cover rounded-2xl '
           src={img}
         />
-        {/* <div className='flex flex-col gap-6'>
-          
-          <div className=' py-12 border-b border-black flex flex-col md:flex-row justify-between items-start gap-6  w-full font-display text-lg'>
-            <div className='text-secondary'>Information</div>
-            <div className='flex flex-1 flex-col gap-6 max-w-full md:max-w-xl'>
+        <div className='container font-text flex flex-col items-end py-16 text-2xl mx-auto'>
+          <div className='flex flex-1 flex-col max-w-3xl gap-6'>
+            <div className='font-medium'>Information</div>
+            <div className='text-normal text-secondary flex flex-col max-w-3xl gap-6'>
               <p>
                 Driven by my curiosity, I have become a well-rounded designer
                 who feels comfortable throughout the entire process of creating
@@ -44,31 +44,63 @@ export default function Information() {
                 South American food, tinkering with development, teaching
                 design, and creating music
               </p>
-              <p className='text-base'>
-                For more information or collaborations - please email
-                <a
-                  href='mailto:pelleadlen@gmail.com'
-                  className='underline ml-1'>
-                  pelleadlen@gmail.com
-                </a>
-              </p>
+            </div>
+            <p className='text-base font-medium'>
+              For more information or collaborations - please email
+              <a href='mailto:pelleadlen@gmail.com' className='underline ml-1'>
+                pelleadlen@gmail.com
+              </a>
+            </p>
+            <div className='flex flex-1 flex-col py-12 gap-6'>
+              <div className='font-medium'>Services</div>
+              <div className='text-normal text-secondary flex flex-col gap-6'>
+                <ul className='flex flex-col gap-2'>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    User Experience Design
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    Interactive Prototyping
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    User Research & Testing
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    UI Development
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    Design Systems
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    Interface Design
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <RxCircle />
+                    Product Strategy
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='flex flex-1 flex-col gap-6'>
+              <div className='font-medium'>Colophon</div>
+              <div className='text-normal text-secondary flex flex-col gap-6'>
+                <p>
+                  Built with Next.js and Tailwind CSS. Hosted on Vercel.
+                  Portfolio contains both commissioned and studio projects.
+                  Studio ones includes project team with different talents and
+                  responsibilities. Projects including an agency name were
+                  designed and created during my employment there → It’s not a
+                  one man show.
+                </p>
+              </div>
             </div>
           </div>
-          <div className=' py-12 flex flex-col md:flex-row justify-between items-start gap-6  w-full font-display text-lg'>
-            <div className='text-secondary'>Colophon</div>
-            <div className='flex flex-1 flex-col gap-6 max-w-full md:max-w-xl'>
-              <p>
-                Built with Next.js and Tailwind CSS. Hosted on Vercel. Portfolio
-                contains both commissioned and studio projects. Studio ones
-                includes project team with different talents and
-                responsibilities. Projects including an agency name were
-                designed and created during my employment there → It’s not a one
-                man show.
-              </p>
-            </div>
-          </div>
-        </div> */}
-        <Footer />
+        </div>
       </section>
     </>
   );

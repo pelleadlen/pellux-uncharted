@@ -1,32 +1,32 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Video from "next-video";
-import styles from "./page.module.css";
+import Image from "next/image";
 
 const ImageModal = ({ media, closeModal }) => {
   const transitionIn = {
     type: "spring",
-    damping: 80,
-    stiffness: 500,
+    stiffness: 100,
+    damping: 30,
   };
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0 }}
       onClick={closeModal}
-      className='flex flex-col overflow-hidden bg-white bg-opacity-90 backdrop-blur-lg fixed inset-0 z-50 items-center justify-center'>
+      className=' bg-white   grid place-items-center px-4  fixed inset-0 z-50 '>
       <motion.div
+        layout
         transition={transitionIn}
         layoutId={media.id}
-        className='rounded-lg overflow-hidden '>
+        onClick={closeModal}>
         {media.type === "image" ? (
           <Image
+            draggable='false'
             src={media.src}
-            layout='responsive'
-            className='h-full min-w-72 object-cover'
+            className='w-auto aspect-square rounded-2xl md:aspect-auto object-cover'
           />
         ) : (
           <Video
@@ -36,15 +36,20 @@ const ImageModal = ({ media, closeModal }) => {
             playsInline
             controls={false}
             src={media.src}
-            className={
-              media.hasVideoStyle ? styles.video : "h-full origin-center "
-            }
+            className=' max-w-screen  rounded-2xl  object-cover'
           />
         )}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ delay: 0.1, duration: 0.9 }}
+          className='flex  justify-center py-6'>
+          <p>Case for E.ON the leading electricity provider in Europe</p>
+        </motion.div>
       </motion.div>
-
-      <button onClick={closeModal} className='mb-4'>
-        Back to Grid
+      <button onClick={closeModal} className='mb-4 absolute right-4 top-4'>
+        Close
       </button>
     </motion.div>
   );
