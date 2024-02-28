@@ -1,10 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import img from "../../../public/images/charwood.png";
 import fishingCard from "../../../public/images/charlie/card.png";
 import depositScreens from "../../../public/images/charlie/deposit.png";
-
 import computer from "../../../public/images/charlie/computer.png";
 import brand from "../../../public/images/charlie/brand2.png";
 import signup from "../../../public/images/charlie/signup.png";

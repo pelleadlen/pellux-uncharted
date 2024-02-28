@@ -23,26 +23,6 @@ const display = localFont({
     },
   ],
 });
-// const text = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/HelveticaNowText-Bold.ttf",
-//       weight: "700",
-//     },
-//     {
-//       path: "../../public/fonts/HelveticaNowText-Medium.ttf",
-//       weight: "500",
-//     },
-//     {
-//       path: "../../public/fonts/HelveticaNowText-Regular.ttf",
-//       weight: "400",
-//     },
-//     {
-//       path: "../../public/fonts/HelveticaNowText-Light.ttf",
-//       weight: "300",
-//     },
-//   ],
-// });
 
 export const viewport = {
   themeColor: "#E8F5FE",
