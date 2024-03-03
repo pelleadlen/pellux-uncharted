@@ -8,22 +8,22 @@ import LocalTime from "./localTime";
 export default function Information() {
   return (
     <>
-      <section className=' mx-4  '>
-        <div className=' mt-16 py-36 flex flex-col justify-center items-center'>
-          <h1 className='max-w-3xl mb-12 text-2xl md:text-4xl font-display text-center tracking-tight'>
+      <section className=" mx-4  ">
+        <div className=" mt-16 flex flex-col items-center justify-center py-36">
+          <h1 className="mb-12 max-w-3xl text-center font-display text-2xl tracking-tight md:text-4xl">
             I'm Pelle Adlén. Based in Malmö, Sweden. Happiest when collaborating
             with great people to design purposeful digital products.
           </h1>
           <LocalTime />
         </div>
         <Image
-          className='w-full max-h-screen object-cover rounded-2xl '
+          className="max-h-screen w-full rounded-2xl object-cover "
           src={img}
         />
-        <div className='container font-text flex flex-col items-end py-16 text-2xl mx-auto'>
-          <div className='flex flex-1 flex-col max-w-3xl gap-6'>
-            <div className='font-medium'>Information</div>
-            <div className='text-normal text-secondary flex flex-col max-w-3xl gap-6'>
+        <div className="font-text container mx-auto flex flex-col items-end py-16 text-2xl">
+          <div className="flex max-w-3xl flex-1 flex-col gap-6">
+            <div className="font-medium">Information</div>
+            <div className="text-normal flex max-w-3xl flex-col gap-6 text-secondary">
               <p>
                 Driven by my curiosity, I have become a well-rounded designer
                 who feels comfortable throughout the entire process of creating
@@ -45,50 +45,50 @@ export default function Information() {
                 design, and creating music
               </p>
             </div>
-            <p className='text-base font-medium'>
+            <p className="text-base font-medium">
               For more information or collaborations - please email
-              <a href='mailto:pelleadlen@gmail.com' className='underline ml-1'>
+              <a href="mailto:pelleadlen@gmail.com" className="ml-1 underline">
                 pelleadlen@gmail.com
               </a>
             </p>
-            <div className='flex flex-1 flex-col py-12 gap-6'>
-              <div className='font-medium'>Services</div>
-              <div className='text-normal text-secondary flex flex-col gap-6'>
-                <ul className='flex flex-col gap-2'>
-                  <li className='flex items-center gap-2'>
+            <div className="flex flex-1 flex-col gap-6 py-12">
+              <div className="font-medium">Services</div>
+              <div className="text-normal flex flex-col gap-6 text-secondary">
+                <ul className="flex flex-col gap-2">
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     User Experience Design
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     Interactive Prototyping
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     User Research & Testing
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     UI Development
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     Design Systems
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     Interface Design
                   </li>
-                  <li className='flex items-center gap-2'>
+                  <li className="flex items-center gap-2">
                     <RxCircle />
                     Product Strategy
                   </li>
                 </ul>
               </div>
             </div>
-            <div className='flex flex-1 flex-col gap-6'>
-              <div className='font-medium'>Colophon</div>
-              <div className='text-normal text-secondary flex flex-col gap-6'>
+            <div className="flex flex-1 flex-col gap-6">
+              <div className="font-medium">Colophon</div>
+              <div className="text-normal flex flex-col gap-6 text-secondary">
                 <p>
                   Built with Next.js and Tailwind CSS. Hosted on Vercel.
                   Portfolio contains both commissioned and studio projects.
