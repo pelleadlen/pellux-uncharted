@@ -39,7 +39,7 @@ export const imgs = [
   { src: flutter, id: "flutter", type: "video" },
   { src: novice, id: "novice", type: "image" },
   { src: bambuser, id: "bambuser", type: "video" },
-  { src: trip, id: "trip", type: "video" },
+
   {
     src: slideImgsMercedes,
     id: "calculator",

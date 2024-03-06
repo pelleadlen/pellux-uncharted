@@ -16,7 +16,7 @@ const SlideShow = ({ images, height, startDelay }) => {
       setParentWidth(parentRef.current.offsetWidth);
     }
     setFirstLoad(false);
-  }, [parentRef.current]);
+  }, []);
 
   useEffect(() => {
     const startTimer = setTimeout(() => {
@@ -36,7 +36,7 @@ const SlideShow = ({ images, height, startDelay }) => {
     }
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, count]);
+  }, [isAutoPlaying, count, images.length, startDelay]);
 
   const togglePlay = () => {
     setIsAutoPlaying(!isAutoPlaying);

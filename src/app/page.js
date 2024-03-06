@@ -2,19 +2,13 @@
 import Charlie from "../../public/images/charwood.png";
 import Fourtrack from "../../public/images/130.png";
 import system from "../../public/images/3.png";
-import Designsystem from "../../public/images/Designsystem.png";
 import Shortcuts from "@/components/shortcuts";
 import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
-import ContactForm from "../components/contactForm";
-import ImageGrid from "./archive/imageGrid";
 
 export default function Home() {
   return (
     <>
-      {/* <div className="h-screen bg-black bg-opacity-50">
-        <ContactForm />
-      </div> */}
       <main className="mx-4  flex min-h-screen flex-col md:mx-8 ">
         <div className=" gap-4 pb-12  pt-96 ">
           <h1 className=" max-w-4xl text-2xl  font-normal tracking-tight md:text-4xl    ">
