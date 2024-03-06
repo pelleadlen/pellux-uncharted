@@ -19,8 +19,8 @@ const Footer = () => {
       </div>
       <ul className="flex justify-center gap-6 md:justify-end ">
         {socialLinks.map((link) => (
-          <FramerMagnetic>
-            <li className="font-display text-secondary" key={link.key}>
+          <FramerMagnetic key={link.key}>
+            <li className="font-display text-secondary">
               <a href="#">{link.name}</a>
             </li>
           </FramerMagnetic>
