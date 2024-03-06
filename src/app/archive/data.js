@@ -30,6 +30,8 @@ export const imgs = [
     id: "slideshow",
     type: "slideshow",
     title: "Hypothesis",
+    startDelay: 6000,
+
     description:
       "P22 is a design studio that has managed to maintain its independence from external investment. Instead, we choose to power our internal projects through collaborative client work.",
   },
@@ -38,6 +40,11 @@ export const imgs = [
   { src: novice, id: "novice", type: "image" },
   { src: bambuser, id: "bambuser", type: "video" },
   { src: trip, id: "trip", type: "video" },
-  { src: slideImgsMercedes, id: "calculator", type: "slideshow" },
+  {
+    src: slideImgsMercedes,
+    id: "calculator",
+    type: "slideshow",
+    startDelay: 5000,
+  },
   { src: tibb, id: "tibb", type: "video" },
 ];

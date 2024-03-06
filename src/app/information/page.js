@@ -20,7 +20,7 @@ export default function Information() {
           className="max-h-screen w-full rounded-2xl object-cover "
           src={img}
         />
-        <div className="font-text container mx-auto flex flex-col items-end py-16 text-2xl">
+        <div className="font-text container mx-auto flex flex-col items-end py-16 text-lg md:text-xl">
           <div className="flex max-w-3xl flex-1 flex-col gap-6">
             <div className="font-medium">Information</div>
             <div className="text-normal flex max-w-3xl flex-col gap-6 text-secondary">

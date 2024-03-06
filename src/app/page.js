@@ -7,6 +7,7 @@ import Shortcuts from "@/components/shortcuts";
 import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
 import ContactForm from "../components/contactForm";
+import ImageGrid from "./archive/imageGrid";
 
 export default function Home() {
   return (

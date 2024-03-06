@@ -11,14 +11,15 @@ const CaseThumbnail = (props) => {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={props.className}>
+        className={props.className}
+      >
         <Link href={props.path}>
-          <motion.div className=' flex flex-col h-full  relative rounded-2xl overflow-hidden'>
-            <div className='flex gap-2 absolute z-50 bottom-4  left-4'>
-              <h3 className='py-1 px-2 bg-black text-white font-normal font-display tracking-wide backdrop-blur-xl  text-sm  bg-opacity-25    rounded-full leading-none'>
+          <motion.div className=" relative flex h-full  flex-col overflow-hidden rounded-2xl">
+            <div className="absolute bottom-4 left-4 z-50 flex  gap-2">
+              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-1 font-display text-sm font-normal  leading-none  tracking-wide    text-white backdrop-blur-xl">
                 {props.project}
               </h3>
-              <h3 className='py-1 px-2 bg-black text-white font-normal font-display tracking-wide backdrop-blur-xl  text-sm  bg-opacity-25    rounded-full leading-none'>
+              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-1 font-display text-sm font-normal  leading-none  tracking-wide    text-white backdrop-blur-xl">
                 {props.description}
               </h3>
             </div>
@@ -26,11 +27,12 @@ const CaseThumbnail = (props) => {
               layoutId={props.layoutId}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.5 }}
-              className='h-full'>
+              className="h-full"
+            >
               <Image
-                className='object-cover h-full'
-                width='auto'
-                height='100%'
+                className=" h-full object-cover "
+                width="auto"
+                height="100%"
                 src={props.src}
                 alt={props.project}
               />
@@ -41,7 +43,7 @@ const CaseThumbnail = (props) => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.2 }}
                     exit={{ opacity: 0 }}
-                    className='absolute inset-0 bg-black bg-opacity-10'
+                    className="absolute inset-0 bg-black bg-opacity-10"
                   />
                 )}
               </AnimatePresence>

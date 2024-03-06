@@ -15,11 +15,15 @@
     "@splinetool/runtime": "^1.0.17",
     "formik": "^2.4.5",
     "framer-motion": "^10.17.4",
+    "ldrs": "^1.0.1",
     "next": "^14.1.0",
     "next-video": "^0.11.2",
     "react": "^18",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^5.0.1",
+    "react-use": "^17.5.0",
     "yup": "^1.3.3"
   },
   "devDependencies": {

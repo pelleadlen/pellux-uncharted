@@ -20,15 +20,16 @@ const ImageGrid = () => {
   };
 
   return (
-    <section className=' grid grid-cols-3 gap-4 lg:mt-4'>
+    <section className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-4 lg:grid-cols-3">
       {imgs.map((media) => {
         return (
           <div
             key={media.id}
             onMouseEnter={() => setHoveredItemId(media.id)}
             onMouseLeave={() => setHoveredItemId(null)}
-            className=' relative min-h-[30rem] rounded-2xl overflow-hidden'>
-            <div className='font-display text-secondary text-sm tracking-wide bg-surfaceSecondary w-full py-4 px-4 flex justify-center'>
+            className=" relative min-h-[30rem] overflow-hidden rounded-2xl"
+          >
+            <div className="flex w-full justify-center bg-surfaceSecondary px-4 py-4 font-display text-sm tracking-wide text-secondary">
               Hypothesis
             </div>
             {(() => {
@@ -40,9 +41,11 @@ const ImageGrid = () => {
                 case "slideshow":
                   return (
                     <SlideShow
-                      height='h-full'
+                      height="h-full"
                       media={media}
+                      startDelay={media.startDelay}
                       images={media.src}
+                      intervals={media.intervals}
                     />
                   );
                 default:
@@ -53,13 +56,14 @@ const ImageGrid = () => {
               {hoveredItemId === media.id && (
                 <motion.div
                   variants={descriptionAnimation}
-                  initial='initial'
-                  animate='animate'
-                  exit='exit'
-                  transition='transition'
-                  className='absolute bottom-2 mx-2 rounded-lg p-4 bg-white text-sm font-normal z-50 flex flex-col gap-3'>
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition="transition"
+                  className="absolute bottom-2 z-50 mx-2 flex flex-col gap-3 rounded-lg bg-white p-4 text-sm font-normal"
+                >
                   {media.description}
-                  <span className=' font-medium text-xs'>
+                  <span className=" text-xs font-medium">
                     Undisclosed Client
                   </span>
                 </motion.div>
