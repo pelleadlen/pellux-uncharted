@@ -19,6 +19,7 @@ export default function Information() {
         <Image
           className="max-h-screen w-full rounded-2xl object-cover "
           src={img}
+          alt="Pelle Adlén peeping in behind a computer"
         />
         <div className="font-text container mx-auto flex flex-col items-end py-16 text-lg md:text-xl">
           <div className="flex max-w-3xl flex-1 flex-col gap-6">
@@ -94,7 +95,7 @@ export default function Information() {
                   Portfolio contains both commissioned and studio projects.
                   Studio ones includes project team with different talents and
                   responsibilities. Projects including an agency name were
-                  designed and created during my employment there → It’s not a
+                  designed and created during my employment there → It's not a
                   one man show.
                 </p>
               </div>

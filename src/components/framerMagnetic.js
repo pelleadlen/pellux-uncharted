@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { useWindowSize } from "react-use";
+
 export default function FramerMagnetic({ children }) {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const mouseMove = (e) => {
     const { clientX, clientY } = e;
-    const { width: viewportWidth } = useWindowSize();
+
     const { width, height, left, top } = ref.current.getBoundingClientRect();
     let x = clientX - (left + width / 2);
     let y = clientY - (top + height / 2);
