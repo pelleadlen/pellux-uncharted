@@ -6,9 +6,7 @@ import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { FiX } from "react-icons/fi";
-
-import { lineSpinner } from "ldrs";
-
+import { RotatingLines } from "react-loader-spinner";
 const ContactForm = ({ setOpenContact, toast }) => {
   const formik = useFormik({
     initialValues: { user_name: "", user_email: "", message: "" },
@@ -48,7 +46,7 @@ const ContactForm = ({ setOpenContact, toast }) => {
       //   );
     },
   });
-  lineSpinner.register();
+
   const form = useRef();
   let [isSending, setIsSending] = useState(false);
   return (
@@ -152,7 +150,15 @@ const ContactForm = ({ setOpenContact, toast }) => {
             {!isSending ? (
               <FiArrowRight />
             ) : (
-              <l-line-spinner size="20" stroke="2" speed="1" color="black" />
+              <RotatingLines
+                visible={true}
+                height="30"
+                width="30"
+                strokeColor="black"
+                strokeWidth="2"
+                animationDuration="0.75"
+                ariaLabel="rotating-lines-loading"
+              />
             )}
           </div>
         </button>
