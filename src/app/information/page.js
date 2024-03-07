@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 import Image from "next/image";
 import img from "../../../public/images/myself.jpg";
 
@@ -31,10 +32,11 @@ export default function Information() {
                 digital products, from start to finish. Currently working as an
                 independent product designer. Previously at EY Doberman.
               </p>
+
               <p>
-                I believe in the power of collaboration. I want to help make
-                products that help people, are more beautiful, and more fun. I’m
-                passionate about combining research, technology, and aesthetics
+                believe in the power of collaboration. I want to help make
+                products that help people, are more beautiful, and more fun.
+                Passionate about combining research, technology, and aesthetics
                 to produce compelling stories, products, and digital
                 experiences.
               </p>
