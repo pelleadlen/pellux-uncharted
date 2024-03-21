@@ -10,8 +10,8 @@ export default function Information() {
   return (
     <>
       <section className=" mx-4  ">
-        <div className=" mt-16 flex flex-col items-center justify-center py-36">
-          <h1 className="mb-12 max-w-3xl text-center font-display text-2xl tracking-tight md:text-4xl">
+        <div className=" mt-16 flex flex-col items-center justify-center py-64  ">
+          <h1 className="mb-16 max-w-5xl text-center font-display text-2xl tracking-tight md:text-5xl">
             I'm Pelle Adlén. Based in Malmö, Sweden. Happiest when collaborating
             with great people to design purposeful digital products.
           </h1>
@@ -30,7 +30,7 @@ export default function Information() {
                 Driven by my curiosity, I have become a well-rounded designer
                 who feels comfortable throughout the entire process of creating
                 digital products, from start to finish. Currently working as an
-                independent product designer. Previously at EY Doberman.
+                independent Senior Product Designer. Previously at EY Doberman.
               </p>
 
               <p>

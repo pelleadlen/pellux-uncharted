@@ -1,0 +1,31 @@
+
+
+.note-wrapper {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.note-wrapper .note {
+    position: absolute;
+    left: 0;
+    transform-origin: 180px;
+    transform: rotate(calc(360deg/12 * var(--i)));
+   
+}
+
+.note-wrapper .note p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 56px;
+    transform: rotate(calc(-360deg/ 12 * var(--i)));
+    border-radius: 50%;
+}
+

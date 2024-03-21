@@ -16,7 +16,7 @@ const LocalTime = () => {
   return (
     <div className='flex gap-4 items-center font-display py-2 px-4 bg-surface rounded-full '>
       <div className='flex gap-2 items-center'>
-        <div className='h-2 w-2 rounded-full bg-secondary' />
+        <div className='h-4 w-4 rounded-full bg-secondary' />
         <p>Local Time</p>
       </div>
       <p>

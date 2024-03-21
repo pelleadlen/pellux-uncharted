@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Smiley from "../../../public/svg/SmileyYELLOW.svg";
-import FramerMagnetic from "../framerMagnetic";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -33,7 +32,7 @@ const NavBar = () => {
   const { width } = useWindowSize();
   return (
     <>
-      <header className="absolute  top-0  w-full cursor-pointer px-4 py-4 font-display text-sm md:text-base lg:px-8">
+      <header className="absolute  top-0  w-full cursor-pointer px-4 py-4 font-display text-sm md:text-xl lg:px-8">
         <nav className=" flex w-full items-center  justify-between  gap-6">
           <Link
             onMouseEnter={() => setIsHovered(true)}

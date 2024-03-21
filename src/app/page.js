@@ -5,13 +5,17 @@ import system from "../../public/images/3.png";
 import Shortcuts from "@/components/shortcuts";
 import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
+import Clavier from "@/components/clavier/clavier";
 
 export default function Home() {
   return (
     <>
-      <main className="mx-4  flex min-h-screen flex-col md:mx-8 ">
-        <div className=" gap-4 pb-12  pt-96 ">
-          <h1 className=" max-w-4xl text-2xl  font-normal tracking-tight md:text-4xl    ">
+      <main className=" flex min-h-screen items-center justify-center flex-col md:mx-2 bg-[#8EC9FF] ">
+
+        <Clavier />
+
+        {/* <div className=" gap-4 pb-12  mt-96 ">
+          <h1 className=" max-w-5xl text-2xl pt-52 font-normal tracking-tight md:text-[3rem] leading-[1.2]   ">
             A Product Designer from Sweden, committed to creating meaningful
             products and user-friendly experiences that speak to both heart and
             mind.
@@ -42,7 +46,7 @@ export default function Home() {
             className="col-span-full lg:col-span-1"
           />
         </div>
-        <Pellux className="my-12 h-80" />
+        <Pellux className="my-12 h-80" /> */}
       </main>
     </>
   );

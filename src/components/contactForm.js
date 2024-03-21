@@ -152,10 +152,10 @@ const ContactForm = ({ setOpenContact, toast }) => {
             ) : (
               <RotatingLines
                 visible={true}
-                height="30"
-                width="30"
+                height="24"
+                width="24"
                 strokeColor="black"
-                strokeWidth="2"
+                strokeWidth="3"
                 animationDuration="0.75"
                 ariaLabel="rotating-lines-loading"
               />

@@ -7,7 +7,7 @@ const data = [
     color: "bg-secondary",
     textColor: "",
     description:
-      "I'm Pelle Adlén. Based in Malmö, Sweden. Happiest when collaborating with great people to design purposeful digital products.",
+      "Info and fun stuff",
     link: "/about",
     isExternal: false,
   },
@@ -16,7 +16,7 @@ const data = [
     color: "bg-primary",
     textColor: "text-white",
     description:
-      "Selection of recent and confidential work that I recently worked on",
+      "Selection of recent and confidential work.",
     link: "/archive",
     isExternal: false,
   },
@@ -24,7 +24,7 @@ const data = [
     title: "Contact",
     color: "bg-tertiary",
     description:
-      "Do you have a business, idea or product you want to bring to life? Let’s grab a coffee and see how we can collaborate together.",
+      "Let's discuss how we can collaborate.",
     link: "mailto:someone@example.com",
     isExternal: true,
   },
@@ -47,11 +47,11 @@ const Shortcuts = () => {
           <li key={index}>
             <div className="font-text flex gap-4  rounded-lg p-2  hover:bg-surfaceHover">
               <div
-                className={`grid min-h-14 min-w-14 place-items-center ${item.textColor} ${item.color} rounded-lg`}
+                className={`grid  min-h-[72px] min-w-[72px] place-items-center ${item.textColor} ${item.color} rounded-lg`}
               >
-                <RxArrowTopRight className="h-6 w-6" />
+                <RxArrowTopRight className="h-8 w-8" />
               </div>
-              <div className="flex flex-col justify-center overflow-hidden font-display">
+              <div className="flex flex-col text-xl justify-center overflow-hidden font-display">
                 {item.isExternal ? (
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
                     {item.title}
