@@ -4,15 +4,6 @@ import { useState } from "react";
 import "../clavier/clavier.css";
 import * as Tone from "tone";
 const tones = [
-
-  {
-    tone: "F", 
-    freq: "F3",
-    bgColor: "bg-[#AB0034]", 
-    stroke: false, 
-    strokeColor: ""
-  },
-  
   {
     tone: "C", 
     freq: "C3",
@@ -20,6 +11,9 @@ const tones = [
     stroke: false, 
     strokeColor: ""
   },
+
+  
+
   {
     tone: "G", 
     freq: "G3",
@@ -88,6 +82,13 @@ const tones = [
     tone: "Bb", 
     freq: "A#3",
     bgColor: "bg-[#A9677C]", 
+    stroke: false, 
+    strokeColor: ""
+  },
+  {
+    tone: "F", 
+    freq: "F3",
+    bgColor: "bg-[#AB0034]", 
     stroke: false, 
     strokeColor: ""
   },

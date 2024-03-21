@@ -6,14 +6,27 @@ import Shortcuts from "@/components/shortcuts";
 import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
 import Clavier from "@/components/clavier/clavier";
+import HeroText from "@/components/heroText";
 
 export default function Home() {
   return (
     <>
-      <main className=" flex min-h-screen items-center justify-center flex-col md:mx-2 bg-[#8EC9FF] ">
-
+      <main className="md:mx-2  ">
+        <section className=" mt-14 pt-6">
+        <HeroText />
+        </section>
+      <div className="mt-24 grid grid-cols-1 items-stretch gap-2 lg:grid-cols-3 lg:gap-2">
+      <div className="bg-[#8EC9FF] col-span-1 rounded-lg flex items-center justify-center ">
         <Clavier />
-
+        </div>
+        <CaseThumbnail
+            project="Charlie"
+            description="Product Design"
+            src={Charlie}
+            path="/charlie"
+            className="col-span-full lg:col-span-2"
+          />
+          </div>
         {/* <div className=" gap-4 pb-12  mt-96 ">
           <h1 className=" max-w-5xl text-2xl pt-52 font-normal tracking-tight md:text-[3rem] leading-[1.2]   ">
             A Product Designer from Sweden, committed to creating meaningful

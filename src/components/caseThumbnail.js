@@ -14,12 +14,12 @@ const CaseThumbnail = (props) => {
         className={props.className}
       >
         <Link href={props.path}>
-          <motion.div className=" relative flex h-full  flex-col overflow-hidden rounded-2xl">
-            <div className="absolute bottom-4 left-4 z-50 flex  gap-2">
-              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-1 font-display text-sm font-normal  leading-none  tracking-wide    text-white backdrop-blur-xl">
+          <motion.div className=" relative flex h-full flex-col overflow-hidden rounded-lg">
+            <div className="absolute bottom-4 left-4 z-50 flex gap-2">
+              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-2   leading-none     text-white backdrop-blur-xl">
                 {props.project}
               </h3>
-              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-1 font-display text-sm font-normal  leading-none  tracking-wide    text-white backdrop-blur-xl">
+              <h3 className="rounded-full bg-black bg-opacity-25 px-2 py-2 leading-none      text-white backdrop-blur-xl">
                 {props.description}
               </h3>
             </div>
