@@ -1,5 +1,6 @@
 "use client";
 import Charlie from "../../public/images/charwood.png";
+import Ft from "../../public/images/ftrack.png";
 import Fourtrack from "../../public/images/130.png";
 import system from "../../public/images/3.png";
 import Shortcuts from "@/components/shortcuts";
@@ -7,6 +8,8 @@ import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
 import Clavier from "@/components/clavier/clavier";
 import HeroText from "@/components/heroText";
+import ContactForm from "@/components/contact/contactForm";
+import ContactStatic from "@/components/contact/contactStatic";
 
 export default function Home() {
   return (
@@ -20,12 +23,20 @@ export default function Home() {
         <Clavier />
         </div>
         <CaseThumbnail
-            project="Charlie"
-            description="Product Design"
             src={Charlie}
             path="/charlie"
             className="col-span-full lg:col-span-2"
           />
+               <CaseThumbnail
+            project="Fourtrack"
+            description="Product Design"
+            src={Ft}
+            path="/fourtrack"
+            className="col-span-full lg:col-span-2"
+          />
+          <div className=" bg-surface col-span-1 rounded-lg flex items-center justify-center ">
+<ContactStatic />
+        </div>
           </div>
         {/* <div className=" gap-4 pb-12  mt-96 ">
           <h1 className=" max-w-5xl text-2xl pt-52 font-normal tracking-tight md:text-[3rem] leading-[1.2]   ">

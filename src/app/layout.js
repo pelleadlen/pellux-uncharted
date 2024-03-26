@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/layout/footer";
 
+
 const display = localFont({
   src: [
     {
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={bodyClass}>
+
         <NavBar />
 
         {children}

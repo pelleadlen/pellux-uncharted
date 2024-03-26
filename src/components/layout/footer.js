@@ -13,10 +13,10 @@ const socialLinks = [
 const Footer = () => {
   const { width, height } = useWindowSize();
   return (
-    <footer className=" flex items-center justify-between p-6">
-      {/* <div className="hidden md:block">
+    <footer className=" flex items-center justify-between p-2">
+       <div className="hidden md:block">
         {width}x{height}
-      </div> */}
+      </div> 
       <ul className="flex justify-center gap-6 md:justify-end ">
         {socialLinks.map((link) => (
           <FramerMagnetic key={link.key}>
