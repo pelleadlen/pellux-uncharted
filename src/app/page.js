@@ -11,11 +11,13 @@ import HeroText from "@/components/heroText";
 import ContactForm from "@/components/contact/contactForm";
 import ContactStatic from "@/components/contact/contactStatic";
 
+
 export default function Home() {
   return (
     <>
       <main className="md:mx-2  ">
         <section className=" mt-14 pt-6">
+
         <HeroText />
         </section>
       <div className="mt-24 grid grid-cols-1 items-stretch gap-2 lg:grid-cols-3 lg:gap-2">

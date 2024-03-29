@@ -25,7 +25,7 @@ export default function Information() {
         <div className="font-text container mx-auto flex flex-col items-end py-16 text-lg md:text-xl">
           <div className="flex max-w-3xl flex-1 flex-col gap-6">
             <div className="font-medium">Information</div>
-            <div className="text-normal flex max-w-3xl flex-col gap-6 text-secondary">
+            <div className="text-normal flex max-w-3xl flex-col gap-6 dark:text-[#E6E6E6] text-secondary">
               <p>
                 Driven by my curiosity, I have become a well-rounded designer
                 who feels comfortable throughout the entire process of creating
@@ -56,7 +56,7 @@ export default function Information() {
             </p>
             <div className="flex flex-1 flex-col gap-6 py-12">
               <div className="font-medium">Services</div>
-              <div className="text-normal flex flex-col gap-6 text-secondary">
+              <div className="text-normal flex flex-col gap-6 dark:text-[#E6E6E6] text-secondary">
                 <ul className="flex flex-col gap-2">
                   <li className="flex items-center gap-2">
                     <RxCircle />
@@ -91,7 +91,7 @@ export default function Information() {
             </div>
             <div className="flex flex-1 flex-col gap-6">
               <div className="font-medium">Colophon</div>
-              <div className="text-normal flex flex-col gap-6 text-secondary">
+              <div className="text-normal flex flex-col gap-6 dark:text-[#E6E6E6] text-secondary">
                 <p>
                   Built with Next.js and Tailwind CSS. Hosted on Vercel.
                   Portfolio contains both commissioned and studio projects.

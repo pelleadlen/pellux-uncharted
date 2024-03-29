@@ -19,11 +19,11 @@ const Footer = () => {
       </div> 
       <ul className="flex justify-center gap-6 md:justify-end ">
         {socialLinks.map((link) => (
-          <FramerMagnetic key={link.key}>
-            <li className="font-display text-secondary">
+
+            <li key={link.key} className="font-display dark:text-[#E6E6E6] text-secondary">
               <a href="#">{link.name}</a>
             </li>
-          </FramerMagnetic>
+
         ))}
       </ul>
     </footer>

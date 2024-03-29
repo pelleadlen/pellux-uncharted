@@ -1,7 +1,10 @@
+'use client';
 import NavBar from "@/components/layout/navBar";
 import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/layout/footer";
+
+
 
 
 const display = localFont({
@@ -29,22 +32,26 @@ export const viewport = {
   themeColor: "#E8F5FE",
 };
 
-export const metadata = {
-  title: "Pelle Adlén - Product designer",
-  description: "Pelle Adlén is a product designer & UI developer from Sweden",
-};
+
 
 export default function RootLayout({ children }) {
+
+
+
   const bodyClass = `${display.className}`;
   return (
     <html lang='en'>
       <body className={bodyClass}>
-
+<div className="dark:bg-[#101010] dark:text-[#fefefe]">
         <NavBar />
+        
 
         {children}
         <Footer />
+        </div>
       </body>
     </html>
   );
 }
+
+

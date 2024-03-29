@@ -7,6 +7,10 @@ import reach from "../../public/svg/reach.svg";
 import { FiArrowUp } from "react-icons/fi";
 import DarkModeToggle from "./darkmode/darkModeToggle";
 
+
+
+
+
 const HeroText = () => {
     const [openContact, setOpenContact] = useState(false);
   return (
@@ -17,8 +21,11 @@ const HeroText = () => {
         <h2 className="">A Product Designer from Sweden, committed to creating meaningful products and user-friendly experiences that speak to both mind and heart.</h2>
 <button className="py-2 cursor-pointer"  onClick={() => setOpenContact(!openContact)}>→Get in Touch</button>  
         </div>
-   <DarkModeToggle />
+        <div className="">
+<DarkModeToggle />
+</div>
     </div>
+    
     <AnimatePresence>
         {openContact && (
           <>

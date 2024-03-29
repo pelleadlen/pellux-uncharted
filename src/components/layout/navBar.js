@@ -24,7 +24,8 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="absolute  top-0  w-full cursor-pointer px-4 py-4 ">
+
+      <header className="absolute top-0 dark:bg-[#101010] dark:text-[#fefefe]  w-full cursor-pointer px-4 py-4 ">
         <nav className=" flex w-full items-center justify-between">
           <Link
             onMouseEnter={() => setIsHovered(true)}
