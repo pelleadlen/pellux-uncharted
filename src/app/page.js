@@ -8,8 +8,9 @@ import CaseThumbnail from "@/components/caseThumbnail";
 import { Pellux } from "@/components/rive";
 import Clavier from "@/components/clavier/clavier";
 import HeroText from "@/components/heroText";
-import ContactForm from "@/components/contact/contactForm";
+
 import ContactStatic from "@/components/contact/contactStatic";
+import Carousel from "@/components/carousel/carousel";
 
 
 export default function Home() {
@@ -39,6 +40,17 @@ export default function Home() {
           <div className=" bg-surface col-span-1 rounded-lg flex items-center justify-center ">
 <ContactStatic />
         </div>
+
+          <div className="col-span-1">
+          <Carousel/>
+          </div>
+          <div className="col-span-1 flex rounded-lg items-center bg-surface justify-center ">
+<Pellux className=" w-60 h-full" />
+          </div>
+          <div className="col-span-1">
+          <Carousel/>
+          </div>
+
           </div>
         {/* <div className=" gap-4 pb-12  mt-96 ">
           <h1 className=" max-w-5xl text-2xl pt-52 font-normal tracking-tight md:text-[3rem] leading-[1.2]   ">

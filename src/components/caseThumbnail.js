@@ -53,6 +53,7 @@ const CaseThumbnail = (props) => {
                   <h3 className="rounded-full  bg-black bg-opacity-25 px-2 py-2 leading-none text-white backdrop-blur-xl">
                     View Case
                   </h3>
+
                 </motion.div>
               )}
             </AnimatePresence>
