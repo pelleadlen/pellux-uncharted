@@ -1,90 +1,103 @@
 "use client";
+import { useState, useEffect, useCallback } from "react";
 import Charlie from "../../public/images/charwood.png";
 import Ft from "../../public/images/ftrack.png";
-import Fourtrack from "../../public/images/130.png";
-import system from "../../public/images/3.png";
-import Shortcuts from "@/components/shortcuts";
-import CaseThumbnail from "@/components/caseThumbnail";
+import CaseThumbnail from "@/components/layout/caseThumbnail";
 import { Pellux } from "@/components/rive";
 import Clavier from "@/components/clavier/clavier";
-import HeroText from "@/components/heroText";
-
+import HeroText from "@/components/layout/heroText";
 import ContactStatic from "@/components/contact/contactStatic";
-import Carousel from "@/components/carousel/carousel";
-
+import CueFullscreen from "@/components/cue/CueFullscreen";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Lenis from "lenis";
+import Sheet from "@/components/drawer/Drawer";
 
 export default function Home() {
+  const [isCueShowed, setIsCueShowed] = useState(false);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  const closeCue = useCallback(() => {
+    setIsCueShowed(false);
+  }, [setIsCueShowed]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeCue();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [closeCue]);
+
   return (
     <>
       <main className="md:mx-2  ">
         <section className=" mt-14 pt-6">
-
-        <HeroText />
+          <HeroText />
         </section>
-      <div className="mt-24 grid grid-cols-1 items-stretch gap-2 lg:grid-cols-3 lg:gap-2">
-      <div className="bg-[#8EC9FF] col-span-1 rounded-lg flex items-center justify-center ">
-        <Clavier />
-        </div>
-        <CaseThumbnail
+
+        <div className="mt-24 grid  grid-cols-1 items-stretch gap-2  lg:grid-cols-3 lg:gap-2">
+          <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#8EC9FF] ">
+            <Clavier />
+          </div>
+          <CaseThumbnail
             src={Charlie}
             path="/charlie"
             className="col-span-full lg:col-span-2"
           />
-               <CaseThumbnail
+          <CaseThumbnail
             project="Fourtrack"
             description="Product Design"
             src={Ft}
             path="/fourtrack"
             className="col-span-full lg:col-span-2"
           />
-          <div className=" bg-surface col-span-1 rounded-lg flex items-center justify-center ">
-<ContactStatic />
-        </div>
-
-          <div className="col-span-1">
-          <Carousel/>
+          <div className=" col-span-1 flex items-center justify-center rounded-lg bg-surface ">
+            <ContactStatic />
           </div>
-          <div className="col-span-1 flex rounded-lg items-center bg-surface justify-center ">
-<Pellux className=" w-60 h-full" />
-          </div>
-          <div className="col-span-1">
-          <Carousel/>
+          <div className="col-span-1 flex items-center justify-center rounded-lg bg-surface  ">
+            <Pellux className=" h-full w-60" />
+            <Sheet />
           </div>
 
-          </div>
-        {/* <div className=" gap-4 pb-12  mt-96 ">
-          <h1 className=" max-w-5xl text-2xl pt-52 font-normal tracking-tight md:text-[3rem] leading-[1.2]   ">
-            A Product Designer from Sweden, committed to creating meaningful
-            products and user-friendly experiences that speak to both heart and
-            mind.
-          </h1>
+          <AnimatePresence>
+            {isCueShowed && <CueFullscreen closeCue={closeCue} />}
+          </AnimatePresence>
+          <motion.div
+            onClick={() => setIsCueShowed(true)}
+            className="col-span-full flex items-center justify-center rounded-lg bg-surface lg:col-span-2 "
+          >
+            <motion.div
+              layoutId="cue"
+              transition={{
+                type: "spring",
+                damping: 20,
+                mass: 0.75,
+                stiffness: 100,
+              }}
+            >
+              <Image src="/images/cue/cue1.png" height={200} width={250} />
+            </motion.div>
+          </motion.div>
         </div>
-
-        <div className="mt-6 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-3 lg:gap-6">
-          <Shortcuts className="col-span-full lg:col-span-1" />
-          <CaseThumbnail
-            project="Charlie"
-            description="Product Design"
-            src={Charlie}
-            path="/charlie"
-            className="col-span-full lg:col-span-2"
-          />
-          <CaseThumbnail
-            project="Fourtrack"
-            description="Product Design"
-            path="/fourtrack"
-            src={Fourtrack}
-            className="col-span-full lg:col-span-2"
-          />
-          <CaseThumbnail
-            project="Charlie"
-            description="Design System"
-            path="/designsystem"
-            src={system}
-            className="col-span-full lg:col-span-1"
-          />
-        </div>
-        <Pellux className="my-12 h-80" /> */}
       </main>
     </>
   );

@@ -1,11 +1,8 @@
-'use client';
+"use client";
 import NavBar from "@/components/layout/navBar";
 import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/layout/footer";
-
-
-
 
 const display = localFont({
   src: [
@@ -32,26 +29,17 @@ export const viewport = {
   themeColor: "#E8F5FE",
 };
 
-
-
 export default function RootLayout({ children }) {
-
-
-
   const bodyClass = `${display.className}`;
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={bodyClass}>
-<div className="dark:bg-[#101010] dark:text-[#fefefe]">
         <NavBar />
-        
-
-        {children}
-        <Footer />
+        <div vaul-drawer-wrapper="" className="min-h-[100vh] bg-white">
+          {children}
+          <Footer />
         </div>
       </body>
     </html>
   );
 }
-
-

@@ -52,7 +52,7 @@ const ContactForm = ({ setOpenContact, toast }) => {
   return (
     <>
       <motion.form
-      autoComplete="new-password"
+        autoComplete="new-password"
         ref={form}
         onSubmit={formik.handleSubmit}
         initial={{ y: 800 }}
@@ -75,7 +75,7 @@ const ContactForm = ({ setOpenContact, toast }) => {
         {/* Name */}
         <div className="relative">
           <input
-          autoComplete="new-password"
+            autoComplete="new-password"
             className="peer w-full border-b  border-surface p-5 placeholder-transparent autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]  focus:outline-none"
             placeholder="Name"
             name="user_name"

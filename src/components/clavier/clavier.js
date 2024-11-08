@@ -2,7 +2,7 @@
 import {motion} from "framer-motion";
 import { useState } from "react";
 import "../clavier/clavier.css";
-import * as Tone from "tone";
+import * as tone from "tone";
 const tones = [
   {
     tone: "C", 

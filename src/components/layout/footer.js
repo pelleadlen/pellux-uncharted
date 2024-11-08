@@ -1,6 +1,7 @@
 "use client";
-import FramerMagnetic from "../framerMagnetic";
+
 import { useWindowSize } from "react-use";
+import useOS from "@/hooks/useOS";
 
 const socialLinks = [
   { key: "Email", name: "Email" },
@@ -12,20 +13,33 @@ const socialLinks = [
 
 const Footer = () => {
   const { width, height } = useWindowSize();
-  return (
-    <footer className=" flex items-center justify-between p-2">
-       <div className="hidden md:block">
-        {width}x{height}
-      </div> 
-      <ul className="flex justify-center gap-6 md:justify-end ">
-        {socialLinks.map((link) => (
+  const os = useOS();
 
-            <li key={link.key} className="font-display dark:text-[#E6E6E6] text-secondary">
+  return (
+    <footer
+      style={{
+        clipPath: "polygon(0% 0,100% 0%, 100% 100%,0 100%",
+      }}
+      className=" relative mt-8   h-16   "
+    >
+      <div className="fixed bottom-0 flex  h-16 w-full items-center justify-between bg-surfaceSecondary p-2">
+        <div className="hidden gap-2 md:flex">
+          <div>
+            {width}x{height}
+          </div>
+          <div>{os}</div>
+        </div>
+        <ul className="flex justify-center gap-6 md:justify-end ">
+          {socialLinks.map((link) => (
+            <li
+              key={link.key}
+              className="font-display text-secondary dark:text-[#E6E6E6]"
+            >
               <a href="#">{link.name}</a>
             </li>
-
-        ))}
-      </ul>
+          ))}
+        </ul>
+      </div>
     </footer>
   );
 };
